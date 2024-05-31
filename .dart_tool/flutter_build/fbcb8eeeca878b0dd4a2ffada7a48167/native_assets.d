@@ -1,1 +1,0 @@
- /Users/pc/Documents/chat_app/.dart_tool/flutter_build/fbcb8eeeca878b0dd4a2ffada7a48167/native_assets.yaml: 
