@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/chatpage.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -72,109 +73,131 @@ class _HomeState extends State<Home> {
                 ),
                 child: Column(
                   children: [
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(60),
-                          child: Image.asset(
-                            "images/boy.jpg",
-                            height: 70,
-                            width: 70,
-                            fit: BoxFit.cover,
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ChatPage()),
+                        );
+                      },
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(60),
+                            child: Image.asset(
+                              "pic/burger.jpg",
+                              height: 70,
+                              width: 70,
+                              fit: BoxFit.cover,
+                            ),
                           ),
-                        ),
-                        const SizedBox(
-                          width: 20,
-                        ),
-                        const Column(
+                          const SizedBox(
+                            width: 20,
+                          ),
+                          
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  'Hossam Elyamany',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 17.0,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                                Text(
+                                  'Hello, What are you doing?',
+                                  style: TextStyle(
+                                    color: Colors.black45,
+                                    fontSize: 15.0,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          
+                          Spacer(),
+                          const Text(
+                            '04:30 PM',
+                            style: TextStyle(
+                              color: Colors.black45,
+                              fontSize: 14.0,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    
+                       InkWell(
+                        onTap:(){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const ChatPage()),
+                          );
+                        },
+                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Text(
-                              'Hossam Elyamany',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 17.0,
-                                fontWeight: FontWeight.w500,
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(60),
+                              child: Image.asset(
+                                "pic/pizza.jpg",
+                                height: 70,
+                                width: 70,
+                                fit: BoxFit.cover,
                               ),
                             ),
-                            Text(
-                              'Hello, What are you doing?',
-                              style: TextStyle(
-                                color: Colors.black45,
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.w500,
-                              ),
+                            const SizedBox(
+                              width: 20,
                             ),
-          
-                          ],
-                        ),
-                        Spacer(),
-                        const Text(
-                          '04:30 PM',
-                          style: TextStyle(
-                            color: Colors.black45,
-                            fontSize: 14.0,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 20,),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(60),
-                          child: Image.asset(
-                            "images/boy1.jpg",
-                            height: 70,
-                            width: 70,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 20,
-                        ),
-                        const Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            SizedBox(
-                              height: 10,
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  'Eng: Ahmed Soliman',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 17.0,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                                Text(
+                                  'Hey, What going on?',
+                                  style: TextStyle(
+                                    color: Colors.black45,
+                                    fontSize: 15.0,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ],
                             ),
-                            Text(
-                              'Eng: Ahmed Soliman',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 17.0,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                            Text(
-                              'Hey, What going on?',
+                            Spacer(),
+                            const Text(
+                              '04:30 PM',
                               style: TextStyle(
                                 color: Colors.black45,
-                                fontSize: 15.0,
+                                fontSize: 14.0,
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
-          
                           ],
-                        ),
-                        Spacer(),
-                        const Text(
-                          '04:30 PM',
-                          style: TextStyle(
-                            color: Colors.black45,
-                            fontSize: 14.0,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                      ],
-                    ),
+                                               ),
+                       ),
+                    
                   ],
                 ),
               ),
